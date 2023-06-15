@@ -1,6 +1,6 @@
 """ This is the main programme file
 """
-from flask import Flask, request
+from flask import Blueprint,Flask,redirect,url_for,request,render_template,session,flash,abort,jsonify,Markup
 from models import *
 from functions import myfunctions as func
 from appclasses.stateclass import STATE
@@ -10,6 +10,11 @@ from appclasses.location import LOCATION
 from appclasses.streetclass import STREET
 
 
+@app.route('/')
+def index():
+
+    return render_template('index.html')
+
 @app.route('/states', methods=['GET', 'POST', 'DELETE', 'PUT'])
 def states_route():
     """ Main route that exposes data of all States in Nigeria.
@@ -18,7 +23,14 @@ def states_route():
     """    
     if request.method == 'GET':
         #get State record from the database
-        #db.create_all()        
+        #db.create_all()
+        #Street.query.delete()
+        #Location.query.delete()
+        #LocalGovt.query.delete()
+        #State.query.delete()
+        #db.session.commit()       
+        
+
         worker = STATE()
         state_data = worker.get_states()              
         return json.dumps({"status":"success","data":state_data,"error":{}})
@@ -31,9 +43,12 @@ def states_route():
         #return json.dumps({"status":"success","data":2,"error":{}})        
         json_data = request.get_json(force=True)
         error = []
+        count = 0
 
         if type(json_data) is list:
             for data in json_data:
+                count += 1
+                #print("{}. adding {} now".format(count,data["name"]))
                 if func.validate_input(data,"add_state"):
                     worker = STATE(data)
                     create = worker.add_state()
