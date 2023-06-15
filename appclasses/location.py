@@ -77,7 +77,7 @@ class LOCATION(object):
 		""" Returns all the streets that match location ID """
 		if self.location_id > 0:
 			loc = STREET()
-			return loc.get_street(self.location_obj,"location")
+			return loc.get_street(self.location_id,"location")
 		else:
 			return None
 	

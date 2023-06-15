@@ -77,8 +77,7 @@ class STATE(object):
 			return None
 
 	def get_states(self,state_name=None):
-		""" Returns all the States in Nigeria if no state name is provided """
-		print("getting states")
+		""" Returns all the States in Nigeria if no state name is provided """		
 		state_data = []
 		if state_name is None:
 			locs = State.query.all()
@@ -112,8 +111,8 @@ class STATE(object):
 	def delete_state_record(self, data):
 		""" Deletes database record for the given State including its lgas, locations and streets """
 		
-		if 	func.object_exists("state",{"name":data["state"].lower()}):
-			state_id = func.object_exists("state",{"name":data["state"].lower()}).id_no				
+		if 	func.object_exists("state",{"name":data["state"]}):
+			state_id = func.object_exists("state",{"name":data["state"]}).id_no				
 			query = State.query.filter_by(id_no=state_id).first()			
 
 			#delete all streets associated with the State

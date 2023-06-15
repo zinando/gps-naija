@@ -55,12 +55,7 @@ class STREET(object):
 	def get_street(self,id,level):
 		""" Returns all the streets that match location IDs in the data (dic)
 			level (str) defines the scope of the query  
-		"""
-		query = Street.query.all()
-		count = 0
-		for i in query:
-			print(count+1,". ",i.streetname)
-		print(len(query))
+		"""		
 		if level == "location":
 			return [x.streetname for x in Street.query.filter_by(locID=id).all()]
 		elif level == "lga":
