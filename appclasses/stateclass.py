@@ -112,8 +112,8 @@ class STATE(object):
 	def delete_state_record(self, data):
 		""" Deletes database record for the given State including its lgas, locations and streets """
 		
-		if 	func.object_exists("state",{"name":data["state"]}):
-			state_id = func.object_exists("state",{"name":data["state"]}).id_no				
+		if 	func.object_exists("state",{"name":data["state"].lower()}):
+			state_id = func.object_exists("state",{"name":data["state"].lower()}).id_no				
 			query = State.query.filter_by(id_no=state_id).first()			
 
 			#delete all streets associated with the State
@@ -147,13 +147,13 @@ class STATE(object):
 				self.capital = query.capital
 				self.create_state_obj()
 
-				State.query.filter_by(id_no=self.state_id).update({"state":new_record["name"],"capital":new_record["capital"]})
+				State.query.filter_by(id_no=self.state_id).update({"state":new_record["name"].title(),"capital":new_record["capital"].title()})
 				db.session.commit()
 				return func.alert(1)
 
 		elif data_by_id is not None:			
 			state_id = func.object_exists("state",data_by_id).id_no
-			State.query.filter_by(id_no=state_id).update({"state":new_record["name"],"capital":new_record["capital"]})
+			State.query.filter_by(id_no=state_id).update({"state":new_record["name"].title(),"capital":new_record["capital"].title()})
 			db.session.commit()
 			return func.alert(1)
 

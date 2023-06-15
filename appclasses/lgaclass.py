@@ -142,13 +142,13 @@ class LGA(object):
 					self.name = query.local_govt
 					self.create_lga_obj()
 					
-					LocalGovt.query.filter_by(id_no=self.lga_id).update({"local_govt":new_record["name"]})
+					LocalGovt.query.filter_by(id_no=self.lga_id).update({"local_govt":new_record["name"].title()})
 					db.session.commit()
 					return func.alert(1)
 
 		elif data_by_id is not None:			
 			lga_id = func.object_exists("lga",data_by_id).id_no
-			LocalGovt.query.filter_by(id_no=lga_id).update({"local_govt":new_record["name"]})
+			LocalGovt.query.filter_by(id_no=lga_id).update({"local_govt":new_record["name"].title()})
 			db.session.commit()
 			return func.alert(1)
 

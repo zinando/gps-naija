@@ -143,13 +143,13 @@ class LOCATION(object):
 						self.name = query.location
 						self.create_location_obj()						
 
-						Location.query.filter_by(loc_id=self.location_id).update({"location":new_record["name"]})
+						Location.query.filter_by(loc_id=self.location_id).update({"location":new_record["name"].title()})
 						db.session.commit()
 						return func.alert(1)
 
 		elif data_by_id is not None:			
 			location_id = func.object_exists("location",data_by_id).loc_id
-			Location.query.filter_by(loc_id=location_id).update({"location":new_record["name"]})
+			Location.query.filter_by(loc_id=location_id).update({"location":new_record["name"].title()})
 			db.session.commit()
 			return func.alert(1)
 

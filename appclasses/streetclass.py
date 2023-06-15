@@ -109,13 +109,13 @@ class STREET(object):
 						if func.object_exists("street",{"name":data["street"],"state_id":self.state_id,"lga_id":self.lga_id,"location_id":self.location_id}):
 							self.street_id = func.object_exists("street",{"name":data["street"],"state_id":self.state_id,"lga_id":self.lga_id,"location_id":self.location_id}).strid
 
-							Street.query.filter_by(strid=self.street_id).update({"streetname":new_record["name"]})
+							Street.query.filter_by(strid=self.street_id).update({"streetname":new_record["name"].title()})
 							db.session.commit()
 							return func.alert(1)
 
 		elif data_by_id is not None:			
 			street_id = func.object_exists("street",data_by_id).strid
-			Street.query.filter_by(strid=street_id).update({"streetname":new_record["name"]})
+			Street.query.filter_by(strid=street_id).update({"streetname":new_record["name"].title()})
 			db.session.commit()
 			return func.alert(1)
 
