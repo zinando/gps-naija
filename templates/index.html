@@ -71,7 +71,7 @@
             <p class="intro">Our API will provide you with rich data of places in Nigeria, while you focus on developing other features of your app.</p>    
             <div class="btns">
                 <a class="btn btn-cta-secondary" href="https://gps-naija.onrender.com/states/lagos" target="_blank">Demo</a>
-                <a class="btn btn-cta-primary" href="#" target="">Documentation</a>
+                <a class="btn btn-cta-primary" href="#about" target="">Documentation</a>
             </div>
             <ul class="meta list-inline">
                 <li class="list-inline-item"><a href="https://github.com/zinando/gps-naija" target="_blank">View on GitHub</a></li>
@@ -82,7 +82,7 @@
         <div class="social-media">
             <div class="social-media-inner container text-center">
                 <ul class="list-inline mb-2">
-                    <li class="list-inline-item twitter-follow"><a href="https://twitter.com/3rdwave_themes" class="twitter-follow-button" data-show-count="false">Follow @3rdwave_themes</a>
+                    <li class="list-inline-item twitter-follow"><a href="https://twitter.com/i_am_Zinando" class="twitter-follow-button" data-show-count="false">Follow @i_am_Zinando</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
                     </li><!--//twitter-follow-->
                     <li class="list-inline-item twitter-tweet">
@@ -103,28 +103,75 @@
     </section><!--//promo-->
     
     <!-- ******ABOUT****** --> 
-<!--    <section id="about" class="about section">
+ <section id="about" class="about section">
         <div class="container">
-            <h2 class="title text-center">What is devAid?</h2>
-            <p class="intro text-center">Explain your project in detail. Ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+            <h2 class="title text-center">What is API?</h2>
+            <p class="intro text-center">API a way that allows two or more computer programmes to interract with each other. This interraction usually leads to data flow from one of the computer programmes (the API provider) to the other/others (the clients). The API host computer programme usually have resources/information needed by other computer (clients) programmes. So, it provides an interface of communication to allow these clients to get these resources from it. The word API is an acronymn that stands for Aplication Programming Interface. </p>
+            <p class="intro text-center">In the context of our API, gps-naija has a datastore of the names of all the States in Nigeria and their capital, their Local Government Areas (LGA), major landmarks in each LGA, and Streets. If your application is going to need this information for it to serve its purpose, then this API will be usefull to you. You will not need to hard-code the names of these places in your application, just follow the instructions below to get the data that you need.</p>
             <div class="row">
-                <div class="item col-lg-4 col-md-6 col-12">
+                <div class="item col-lg-6 col-md-6 col-12">
                     <div class="icon-holder">
-                        <i class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-file-text-o"></i>
                     </div>
                     <div class="content">
-                        <h3 class="sub-title">Designed for developers</h3>
-                        <p>Outline a benefit here. Tell users what your plugin/software can do for them. You can change the icon above to any of the 8000+ <a href="https://fontawesome.com/" target="_blank">FontAwesome</a> icons available.</p>
-                    </div>--><!--//content-->
+                        <h3 class="sub-title">Endpoints To Get Data For All The States In Nigeria</h3>
+
+                        <!-- HTML generated using hilite.me -->
+                        <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                            <p style="margin: 0; line-height: 125%">
+                                <p><span style="color: green; margin-right: 15px;">curl </span><span style="color: #333333">https: </span> <span style="color: #333333">//</span>gps<span style="color: #333333">-</span>naija<span style="color: #333333">.</span>onrender<span style="color: #333333">.</span>com<span style="color: #333333">/</span>states</p>
+                                <p><span style="color: #333333">-</span><span style="color: green; margin-right: 15px;"> H</span><span style="background-color: #fff0f0">&quot;Content-Type: application/json&quot;</span></p>
+                                <p><span style="color: #333333">-</span><span style="color: green; margin-right: 15px;"> X</span><span style="color: #333333"> GET</span></p>
+                            </p>
+                        </div>
+                        <p style="margin-top: 20px;">For example, in a python code, i would write:</p>
+
+                        <!-- HTML generated using hilite.me -->
+                        <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                            <p style="margin: 0; line-height: 125%">
+                                <p><span style="color: #888888">#import requests module</span></p>
+                                <p><span style="color: #008800; font-weight: bold">import</span> 
+                                    <span style="color: #0e84b5; font-weight: bold">requests</span>
+                                </p>
+                                <p>url <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&#39;https://gps-naija.onrender.com/states&#39;</span></p>
+                                <p>headers <span style="color: #333333">=</span> {<span style="background-color: #fff0f0">&#39;Conten_Type&#39;</span>: <span style="background-color: #fff0f0">&#39;application/json&#39;</span>}</p>
+                                <p>response <span style="color: #333333">=</span> requests<span style="color: #333333">.</span>get(url, headers <span style="color: #333333">=</span> headers)</p>
+                            </p>
+                        </div><!--//hilite.me-->
+
+                    </div><!--//content-->
                 </div><!--//item-->
-                <!--<div class="item col-lg-4 col-md-6 col-12">
+                <div class="item col-lg-6 col-md-6 col-12">
                     <div class="icon-holder">
-                        <i class="fa-solid fa-clock"></i>
+                        <i class="fa-solid fa-file-text-o"></i>
                     </div>
                     <div class="content">
-                        <h3 class="sub-title">Time saver</h3>
-                        <p>Outline a benefit here. Tell users what your plugin/software can do for them. You can change the icon above to any of the 8000+ <a href="https://fontawesome.com/" target="_blank">FontAwesome</a> icons available.</p>
-                    </div>--><!--//content-->
+                        <h3 class="sub-title">Endpoints To Get Data For One State In Nigeria</h3>
+
+                        <!-- HTML generated using hilite.me -->
+                        <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                            <p style="margin: 0; line-height: 125%">
+                                <p><span style="color: green; margin-right: 15px;">curl </span><span style="color: #333333">https: </span> <span style="color: #333333">//</span>gps<span style="color: #333333">-</span>naija<span style="color: #333333">.</span>onrender<span style="color: #333333">.</span>com<span style="color: #333333">/</span>states<span style="color: #333333">/</span><span style="color: #333333"><</span>state name<span style="color: #333333">></span></p>
+                                <p><span style="color: #333333">-</span><span style="color: green; margin-right: 15px;"> H</span><span style="background-color: #fff0f0">&quot;Content-Type: application/json&quot;</span></p>
+                                <p><span style="color: #333333">-</span><span style="color: green; margin-right: 15px;"> X</span><span style="color: #333333"> GET</span></p>
+                            </p>
+                        </div>
+                        <p style="margin-top: 20px;">For example, to get data for Lagos State, in a python code, i would write:</p>
+
+                        <!-- HTML generated using hilite.me -->
+                        <div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;">
+                            <p style="margin: 0; line-height: 125%">
+                                <p><span style="color: #888888">#import requests module</span></p>
+                                <p><span style="color: #008800; font-weight: bold">import</span> 
+                                    <span style="color: #0e84b5; font-weight: bold">requests</span>
+                                </p>
+                                <p>url <span style="color: #333333">=</span> <span style="background-color: #fff0f0">&#39;https://gps-naija.onrender.com/states<span style="color: #333333">/</span>lagos&#39;</span></p>
+                                <p>headers <span style="color: #333333">=</span> {<span style="background-color: #fff0f0">&#39;Conten_Type&#39;</span>: <span style="background-color: #fff0f0">&#39;application/json&#39;</span>}</p>
+                                <p>response <span style="color: #333333">=</span> requests<span style="color: #333333">.</span>get(url, headers <span style="color: #333333">=</span> headers)</p>
+                            </p>
+                        </div><!--//hilite.me-->
+
+                    </div><!--//content-->
                 </div><!--//item-->
                 <!--<div class="item col-lg-4 col-md-6 col-12">
                     <div class="icon-holder">
