@@ -37,7 +37,7 @@ Each dictionary contains a State's data. It has the following keys:
 ## Tech Stack :poodle:
 
 <p align="center">
-  <img src="https://github.com/zinando/gps-naija/blob/master/static/assets/images/arch.PNG"
+  <img src="https://github.com/zinando/gps-naija/blob/main/static/assets/images/arch.PNG"
        alt="GPS-naija Tech Stack"
        width="600"
   />
