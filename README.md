@@ -15,10 +15,10 @@ There are two main routes that handle client requests from frontend. These are:
 # /states: 
 This route does not require any argument, and it returns a dictionary in which is contained data of all the States in Nigeria. 
 
-# /states/<state_name>:
+# /states/state_name:
 This route takes <b>state_name</b> as argument and returns a dictionary in which is contained data of the State with the name <b>state_name</b>.
 
-## Description response:
+## Description of the response:
 Response from the API is a json-formatted dictionary object with three keys: <b>status</b>, <b>data</b>, and <b>error</b>. It must be parsed with an appropriate method before data could be accessed from it.
 The value of the <b>status</b> key is a string and coud either be <i>success</i> or <i>error</i> depending on the result of the request.
 
