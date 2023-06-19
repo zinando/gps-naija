@@ -34,6 +34,26 @@ Each dictionary contains a State's data. It has the following keys:
 - <b>capital</b> (string): capital of the State
 - <b>lgas</b> (list of dictionaries): contains data of all Local Government Areas in the State. Each instance of the lgas is a dictionary with <b>name</b> and <b>locations</b> as keys. The name represents the name of the local governmentm, while locations is a dictionary list of all locations (major landmarks) in the local government area. Each instance of the the locations is a dictionary with <b>name</b> and <b>streets</b> as keys. As usual, name is the location name while streets is a list of the names of all the streets in that location.
 
+## Tech Stack :poodle:
+
+<p align="center">
+  <img src="https://github.com/zinando/gps-naija/blob/master/static/assets/images/arch.PNG"
+       alt="GPS-naija Tech Stack"
+       width="600"
+  />
+</p>
+
+## Dependencies
+| Tool/Library                                                            | Version |
+| ----------------------------------------------------------------------- | ------- |
+| [PYTHON](https://www.python.org/)                                       | 3.10.2  |
+| [Flask](https://flask.palletsprojects.com/)                             | 2.3.2   |
+| [SQLAlchemy](https://sqlalchemy.org/)                                   | 2.0.15  |
+| [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/)       | 3.0.3   |
+| [gunicorn](https://gunicorn.org)                                        | 20.10.0 |
+
+View the complete list of the dependencies in the [requirements.txt](requirements.txt) file.
+
 ## How to use the API:
 You can use the API in any application freely by using the appropriate endpoints in your request.
 
