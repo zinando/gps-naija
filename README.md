@@ -1,5 +1,5 @@
 # GPS-naija API Project
-![GPS-naija API Banner image](static/assets/images/gps-naija.jpg)
+![GPS-naija API Banner image](static/assets/images/gps-naija.JPG)
 
 ## Project Description
 In this project, i created a RESTful API with Flask. It is a backend app with a database integration and routes for communicating with clients. Its main purpose is to provide clients with names of places in Nigeria organized into States, LGAs, Locations (major landmarks) and Streets. These data have already been prestored and constantly updated in the database.
