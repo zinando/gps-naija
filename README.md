@@ -97,7 +97,7 @@ To get one State data from the API e.g Lagos State
 Accessing the information contained in the response:
 
 ```
-	#parese the response
+	#parse the response
 	data = response.json()
 
 	#to know the status of the request
@@ -106,7 +106,7 @@ Accessing the information contained in the response:
 	#to view the error if the status is 'error'
 	print(data['error'])
 
-	#to access the State data i the request is successful
+	#to access the State data if the request is successful
 	state_data = data['data']
 
 	#loop through state_data to access information for each State
